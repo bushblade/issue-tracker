@@ -71,10 +71,12 @@ const loginUser = asyncHandler(async (req, res) => {
 // @route  api/users/me
 // @access Private
 const getMe = asyncHandler(async (req, res) => {
-  const { user } = req;
-
-  const userM = { id: user.id, email: user.email, name: user.name };
-  res.status(200).json(userM);
+  const user = {
+    id: req.user.id,
+    email: req.user.email,
+    name: req.user.name,
+  };
+  res.status(200).json(user);
 });
 // const getMe = asyncHandler(async (req, res) => {
 //   res.send('me');
