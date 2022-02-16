@@ -11,23 +11,23 @@ const protect = asyncHandler(async (req, res, next) => {
   ) {
     try {
       // Get token from header
-      // its the second item in the array
       token = req.headers.authorization.split(' ')[1];
-      // Verify the token
-      const decode = jwt.verify(token, process.env.JWT_SECRET);
+      // Verify token
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
       // Get user from token
-      req.user = await User.findById(decode.id).select('-password');
+      req.user = await User.findById(decoded.id).select('-password');
+
       next();
     } catch (error) {
       console.log(error);
       res.status(401);
-      throw new Error('Not Authorised');
+      throw new Error('Not authorized');
     }
   }
 
   if (!token) {
     res.status(401);
-    throw new Error('Not Authorised');
+    throw new Error('Not authorized');
   }
 });
 
