@@ -110,9 +110,22 @@ h3 {
   color: #777;
 }
 
+.form-control-desc {
+  max-width: 99%;
+}
+
 .form {
   width: 70%;
   margin: 0 auto;
+}
+
+.new-ticket-form {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px black;
 }
 
 .form-group {
