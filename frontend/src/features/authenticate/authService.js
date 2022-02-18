@@ -2,7 +2,9 @@ import axios from 'axios';
 
 const api_url = 'api/users';
 
-// register user
+// @desc    Register a new user
+// @route   POST /api/users
+// @access  Public
 const register = async (user) => {
   const response = await axios.post(api_url, user);
   if (response.data) {
@@ -11,7 +13,9 @@ const register = async (user) => {
   return response.data;
 };
 
-// login user
+// @desc    Login an existing user
+// @route   POST /api/users/login
+// @access  Public
 const login = async (user) => {
   const response = await axios.post(api_url + '/login', user);
   if (response.data) {
@@ -20,7 +24,9 @@ const login = async (user) => {
   return response.data;
 };
 
-// logut user
+// @desc    Logout an existing user
+// @route   none
+// @access  Public
 const logout = () => localStorage.removeItem('user');
 
 const authService = { register, login, logout };

@@ -1,7 +1,7 @@
 import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { authLogout, reset } from '../features/auth/authSlice';
+import { authLogout, reset } from '../features/authenticate/authSlice';
 
 function Header() {
   const navigate = useNavigate();

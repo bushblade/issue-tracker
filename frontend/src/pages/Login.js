@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { FaSignInAlt } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
-import { authLogin, reset } from '../features/auth/authSlice';
+import { authLogin, reset } from '../features/authenticate/authSlice';
 import Spinner from '../components/Spinner';
 import { useNavigate } from 'react-router-dom';
 

@@ -112,6 +112,8 @@ h3 {
 
 .form-control-desc {
   max-width: 99%;
+  min-width: 49%;
+  max-height: 40vh;
 }
 
 .form {
@@ -122,6 +124,7 @@ h3 {
 .new-ticket-form {
   width: 70%;
   margin: 0 auto;
+  margin-top: -20px;
   border: 1px solid black;
   border-radius: 10px;
   padding: 20px;

@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import { FaUser } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { authNewRegister, reset } from '../features/auth/authSlice';
+import { authNewRegister, reset } from '../features/authenticate/authSlice';
 import Spinner from '../components/Spinner';
 
 function Register() {
