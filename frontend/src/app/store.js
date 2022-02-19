@@ -3,7 +3,7 @@ import authReducer from '../features/authenticate/authSlice';
 import ticketReducer from '../features/tickets/ticketSlice';
 export const store = configureStore({
   reducer: {
-    authenticate: authReducer,
+    auth: authReducer,
     ticket: ticketReducer,
     tickets: ticketReducer,
   },

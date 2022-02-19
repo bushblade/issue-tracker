@@ -6,7 +6,7 @@ import { authLogout, reset } from '../features/authenticate/authSlice';
 function Header() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { user } = useSelector((stt) => stt.authenticate);
+  const { user } = useSelector((stt) => stt.auth);
 
   const handleLogout = () => {
     dispatch(authLogout());
