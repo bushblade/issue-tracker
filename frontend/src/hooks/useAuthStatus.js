@@ -5,7 +5,7 @@ export const useAuthStatus = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  const { user } = useSelector((state) => state.authenticate);
+  const { user } = useSelector((state) => state.auth);
 
   useEffect(() => {
     if (user) {
